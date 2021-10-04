@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+--pale-Blue: hsl(225, 100%, 94%);
+--bright-Blue: hsl(245, 75%, 52%);
+--very-Pale-Blue: hsl(225, 100%, 98%);
+--desaturated-Blue: hsl(224, 23%, 55%);
+--dark-Blue: hsl(223, 47%, 23%);
+}
+
+body{
+    background-color: var(--pale-Blue);
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+.bg{
+    background: url("./images/pattern-background-mobile.svg") no-repeat center/cover;
+    height: 500px;   
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-width:600px)
+{
+    .bg{
+        background: url("./images/pattern-background-desktop.svg") no-repeat center/cover;
+    }
+
+    .container{
+        width: 500px;
+    }
+}
+
+.container
+{
+    background-color: white;
+    margin: 20px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px hsl(223, 47%, 23% ,0.3);
+    
+}
+
+.container img{
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+}
+
+.box1 p{
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+h4{
+    color: var(--dark-Blue);
+}
+
+.box1 h1{
+
+    color: var(--dark-Blue);
+    padding: 25px;
+}
+
+ p{
+    color: var(--desaturated-Blue);
+    
+    font-weight: lighter;
+}
+
+.pricing{
+    background-color: var(--very-Pale-Blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+.pricing article img{
+    width: 50px;
+}
+.pricing article{
+    display: flex;
+    align-items: center;
+}
+
+.pricing article div{
+    padding-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    font-weight: bolder;
+    transition: 0.4s ease-in-out;
+}
+
+.btn-change{
+    color: var(--dark-Blue);
+    text-decoration: underline;
+
+}
+
+.btn-primary{
+    background-color: var(--bright-Blue);
+    padding: 15px 50px;
+    margin-bottom: 20px;
+    
+    border-radius: 10px;
+    color: white;
+}
+
+.btn-secondary{
+    color: var(--bright-Blue);
+}
+
+.btn-change:hover,
+.btn-primary:hover{
+    opacity: 0.8;
+}
+
+.btn-secondary:hover{
+    color: var(--dark-Blue);
+}
